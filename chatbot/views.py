@@ -10,3 +10,6 @@ def chatbot(request):
         response = bard.get_answer(message)['content']
         return JsonResponse({'message':message,'response': response})
     return render(request, 'chatbot.html')
+    
+def retrain(request):
+    return JsonResponse({'message':'Retraining is in progress!'})
